@@ -1,0 +1,10 @@
+#!/bin/bash
+#this script converts dos files to unix files 
+#specify the name of the file to be converted 
+# as the first argument after the command name
+# and the file to be created in the new format
+# as the second argument. 
+# eg: ./dos_unix.sh dosfile unixfile
+sed -e 's/.$//' $1 > $2
+echo "DOS file : $1 changed to Unix file : $2"
+

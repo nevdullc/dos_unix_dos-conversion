@@ -1,0 +1,9 @@
+#!/bin/bash
+# this file converts friendly unix files to DOS format
+#specify the name of the file to be converted
+# as the first argument after the command name
+# and the file to be created in the new format
+# as the second argument.
+# eg: ./unix_dos.sh unixfile dosfile
+sed -e 's/$/\r/' $1 > $2
+echo "UNIX file : $1 changed to DOS file : $2"
